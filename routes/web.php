@@ -26,3 +26,13 @@ Route::get('/login', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// CRUD Biodata Fotografer
+Route::prefix('cmsFotografer')->group(function() {
+    Route::get('/', 'FotograferController@index')->name('fotograferIndex');
+    Route::get('/detail/{id}', 'FotograferController@detail')->name('fotograferDetail');
+    Route::post('/create', 'FotograferController@create')->name('fotograferCreate');
+    Route::get('/edit/{id}', 'FotograferController@edit')->name('fotograferEdit');
+    Route::post('/update', 'FotograferController@update')->name('fotograferUpdate');
+    Route::get('/delete/{id}', 'FotograferController@delete')->name('fotograferDelete');
+  });
