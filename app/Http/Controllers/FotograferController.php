@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Fotografer; 
 use Illuminate\Http\Request;
 
 class FotograferController extends Controller
 {
-    public function index() {
-      return view('adminFotografer.index');
-    }
+  public function index() {
+    $fotografer = Fotografer::all();
+    return view('fotografer.index', ['list_fotografer' => $fotografer, 'show' => 'index']);
+  }
 }
