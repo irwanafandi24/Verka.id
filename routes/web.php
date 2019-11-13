@@ -15,7 +15,9 @@
 //     return view('fotograferIndex');
 // });
 
-Route::get('/', 'FotograferController@index')->name('fotograferIndex');
+Route::get('/', function () {
+    return view('index');
+});
 
 Route::get('/register', function () {
     return view('auth.register');
@@ -27,19 +29,25 @@ Route::get('/login', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Router Login dan Register
+Route::get('/login', 'AuthController@login')->name('login');
+Route::post('/postlogin', 'AuthController@postlogin')->name('postlogin');
+Route::get('/register', 'AuthController@register')->name('register');
+Route::post('/postregister', 'AuthController@postregister')->name('postregister');
+Route::post('/logout', 'AuthController@logout')->name('logout');
 
 // Show Fotografer
-Route::prefix('fotografer')->group(function() {
-    Route::get('/', 'FotograferController@index')->name('fotograferIndex');
+Route::prefix('Photographer')->group(function() {
+    Route::get('/', 'PhotographerController@index')->name('PhotographerIndex');
+    Route::post('/book', 'PhotographerController@book')->name('PhotographerBook');
   });
 
 // CRUD Biodata Fotografer
-Route::prefix('cmsFotografer')->group(function() {
-    Route::get('/', 'cmsFotograferController@index')->name('cmsFotograferIndex');
-    Route::get('/detail/{id}', 'cmsFotograferController@detail')->name('cmsFotograferDetail');
-    Route::post('/create', 'cmsFotograferController@create')->name('cmsFotograferCreate');
-    Route::get('/edit/{id}', 'cmsFotograferController@edit')->name('cmsFotograferEdit');
-    Route::post('/update', 'cmsFotograferController@update')->name('cmsFotograferUpdate');
-    Route::get('/delete/{id}', 'cmsFotograferController@delete')->name('cmsFotograferDelete');
+Route::prefix('cmsPhotographer')->group(function() {
+    Route::get('/', 'cmsPhotographerController@index')->name('cmsPhotographerIndex');
+    Route::get('/detail/{id}', 'cmsPhotographerController@detail')->name('cmsPhotographerDetail');
+    Route::post('/create', 'cmsPhotographerController@create')->name('cmsPhotographerCreate');
+    Route::get('/edit/{id}', 'cmsPhotographerController@edit')->name('cmsPhotographerEdit');
+    Route::post('/update', 'cmsPhotographerController@update')->name('cmsPhotographerUpdate');
+    Route::get('/delete/{id}', 'cmsPhotographerController@delete')->name('cmsPhotographerDelete');
   });
