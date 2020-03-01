@@ -26,6 +26,7 @@
     </script>
 @section('content')
   <body>
+    <!-- Carousel Section =========================================================== -->
     <section  id="home">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -34,11 +35,9 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-          <div class="carousel-item bg-carousle active">
-            <!-- <img class="d-block w-100" src="alam.jpg" alt="First slide"> -->
+          <div class="carousel-item bg-carousle-one active">
             <div class="container">
               <div class="row align-items-center item-carousle ">
-
                 <div class="col-md-7 offset-md-5 item-carousle-content wow fadeInUp" data-wow-duration="1s">
                   <div class="row">
                     <div class="col-md-12">
@@ -50,18 +49,15 @@
                       Abadikan moment sakral wisuda anda dan ukir cerita indah di kampus tercinta. Moment yang tidak akan terulang lagi, siap diabadikan dalam bingkai galeri. Bingung? jangan hawatir, fotograger keren kami siap menemani keseruan wisuda anda.<strong> <i>Jadi tunggu apa lagi ?</i></strong>
                     </div>
                   </div>
-                  <button type="button" name="button" class="btn-order" onclick="window.location.href='{{ route('PhotographerIndex') }}'">ORDER SEKARANG</button>
+                  <button type="button" name="button" class="btn-order" onclick="window.location.href='{{ route('underMaintenance') }}'">ORDER SEKARANG</button>
                 </div>
-
               </div>
             </div>
           </div>
 
           <div class="carousel-item bg-carousle-two">
-            <!-- <img class="d-block w-100" src="alam.jpg" alt="Second slide"> -->
             <div class="container">
               <div class="row align-items-center item-carousle ">
-
                 <div class="col-md-7  item-carousle-content wow fadeInLeft" data-wow-duration="1s">
                   <div class="row">
                     <div class="col-md-12">
@@ -81,10 +77,8 @@
 
 
           <div class="carousel-item bg-carousle-three">
-            <!-- <img class="d-block w-100" src="alamii.jpg" alt="Third slide"> -->
             <div class="container">
               <div class="row align-items-center item-carousle ">
-
                 <div class="col-md-8 col-10 offset-md-2 offset-1 border-three wow zoomIn" data-wow-delay="0.5s">
                   <div class="row">
                     <div class="col-md-12" style="text-align: center;">
@@ -113,6 +107,7 @@
       </div>
     </section>
 
+    <!-- About Section ========================================================= -->
     <section class="section-two" id="about">
       <div class="container">
         <div class="row align-items-center section-two-row">
@@ -131,10 +126,10 @@
               <div class="col-md-12 ">
                 <div class="row section-two-btn">
                   <div class="col-md-4 col-6 offset-md-2">
-                    <center><button type="submit" class="btn-file">Alur Pemesanan</button></center>
+                    <center><button type="submit" class="btn-file" onclick="window.open('https://drive.google.com/open?id=112L0CEt_pONhjpSc2YtvOZWmKNwu3rdQ')">Alur Pemesanan</button></center>
                   </div>
                   <div class="col-md-4 col-6">
-                    <center><button type="submit" class="btn-file">Gabung Mitra</button></center>
+                    <center><button type="submit" class="btn-file" onclick="window.open('https://forms.gle/gnLCCSHofysKe1aH7')">Gabung Mitra</button></center>
                   </div>
                 </div>
               </div>
@@ -166,13 +161,13 @@
               <div class="card-font">
                 Abadikan moment wisudamu dengan fotografer handal dengan penawaran harga menarik.
               </div>
-              <button type="submit" class="btn-detail" onclick="window.location.href='{{ route('PhotographerIndex') }}'">Detail</button>
+              <button type="submit" class="btn-detail" onclick="window.location.href='{{ route('underMaintenance') }}'">Detail</button>
             </div>
           </div>
 
           <div class="col-md-3 col-sm-6 col-6">
             <div class="card-service">
-              <img src="img/mua.jpg" alt="">
+              <img src="img/wedding-hair-and-makeup-trial.jpg" alt="">
               <div class="card-cost">
                 Rp 250.000
               </div>
@@ -200,11 +195,11 @@
 
           <div class="col-md-3 col-sm-6 col-6 col-two">
             <div class="card-service">
-              <img src="img/pakaian.jpg" alt="">
+              <img src="img/kadoWisuda.png" alt="">
               <div class="card-cost">
-                Check
+                Soon
               </div>
-                  <h6>Konveksi</h6>
+                  <h6>Gift</h6>
               <div class="card-font">
                 Layanan pencarian jasa produksi terpercaya dan harga terjangkau untuk memenuhi kebutuhan anda.
               </div>

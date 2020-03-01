@@ -36,6 +36,8 @@ Route::get('/register', 'AuthController@register')->name('register');
 Route::post('/postregister', 'AuthController@postregister')->name('postregister');
 Route::post('/logout', 'AuthController@logout')->name('logout');
 
+Route::get('/underMaintenance', 'GeneralController@underMaintenance')->name('underMaintenance');
+
 // Show Fotografer
 Route::prefix('Photographer')->group(function() {
     Route::get('/', 'PhotographerController@index')->name('PhotographerIndex');

@@ -37,7 +37,7 @@
         }
       })
     </script>
-    
+
 </head>
 <body>
     <div id="app">
@@ -50,7 +50,7 @@
           <li><a href="#about" id="menu2" class="link-menu">About</a></li>
           <li><a href="#service" id="menu3" class="link-menu">Service</a></li>
           <li><a href="#whyus" id="menu4" class="link-menu">Why Us</a></li>
-          <li><a href="{{ route('PhotographerIndex') }}" class="btnNav-order">Order</a></li>
+          <li><a href="{{ route('underMaintenance') }}" class="btnNav-order">Order</a></li>
         </ul>
         <div class="navMenu">
           <div class="line1"></div>

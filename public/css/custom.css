@@ -14,6 +14,7 @@ body{
   box-sizing: border-box;
 }
 
+/*Navigation part setting ======================================================*/
 navx{
   display: flex;
   justify-content: space-around;
@@ -132,30 +133,27 @@ navx ul{
   text-align: center;
 }
 
-/*carousel part setting===================================================*/
-.carousel-inner .carousel-item img{
+/*carousel part setting ======================================================*/
+.carousel-inner .carousel-item{
   width: 100%;
   height:100vh !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.bg-carousle{
+.bg-carousle-one{
   width: 100%;
-  height: 100vh !important;
   background-image: url("../img/slide1.png");
-  background-repeat: no-repeat;
 }
 .bg-carousle-two{
   width: 100%;
-  height: 100vh !important;
   background-image: url("../img/slide2.png");
-  background-repeat: no-repeat;
 }
 
 .bg-carousle-three{
   width: 100%;
-  height: 100vh !important;
   background-image: url("../img/slide3.png");
-  background-repeat: no-repeat;
 }
 .item-carousle{
   height: 100vh !important;
@@ -239,21 +237,21 @@ navx ul{
   box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 414px)  {
+@media screen and (max-width: 500px)  {
   .carousel-inner .carousel-item img{
     height:101vh !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
-  .bg-carousle{
-    background-image: url("../img/sm4141.png");
-    height: 101vh !important;
+  .bg-carousle-one{
+    background-image: url("../img/slideMobile1.png");
   }
   .bg-carousle-two{
-    background-image: url("../img/sm4142.png");
-    height: 101vh !important;
+    background-image: url("../img/slideMobile2.png");
   }
   .bg-carousle-three{
-    background-image: url("../img/sm4143.png");
-    height: 101vh !important;
+    background-image: url("../img/slideMobile3.png");
   }
   .item-carousle-content{
     margin-top: -100px;
@@ -285,37 +283,18 @@ navx ul{
     font-size: 14px;
   }
 }
-@media screen and (max-width: 412px)  {
-    .bg-carousle{
-    background-image: url("../img/sm4121.png");
-  }
-  .bg-carousle-two{
-    background-image: url("../img/sm4122.png");
-  }
-  .bg-carousle-three{
-    background-image: url("../img/sm4123.png");
-  }
-}
-@media screen and (max-width: 375px)  {
-    .bg-carousle{
-    background-image: url("../img/sm3751.png");
-  }
-  .bg-carousle-two{
-    background-image: url("../img/sm3752.png");
-  }
-  .bg-carousle-three{
-    background-image: url("../img/sm3753.png");
-  }
-}
+
 /* ======================================= Section 2=============================== */
 .section-two{
   background: #ffffff;
-  height: 102vh;
-  padding-top:25px !important;
+  height: auto;
+  padding-top: 12vh;
+  padding-bottom: 12vh;
 }
 .section-two-row{
-  height: 100%;
-  padding-top: 20vh;
+  height: auto;
+  padding-top: 6vh;
+  padding-bottom: 6vh;
 }
 .section-two img{
   width:100%;
@@ -361,25 +340,27 @@ navx ul{
   background: #f0f0f0;
 }
 
-@media screen and (max-width: 414px){
-  .section-two img{
-    visibility: hidden;
+@media screen and (max-width: 500px){
+  .section-two{
+    padding-top: 12vh;
+    padding-bottom: 12vh;
   }
-  .section-two-row{
-    padding-top: 18vh;
+
+  .section-two .fadeInRight {
+    display: none !important;
   }
+
   .section-two-title{
     font-size: 30px;
   }
 }
 @media screen and (max-width: 375px){
-  .section-two{
-    padding-top:5px !important;
-  }
+
   .section-two-tagline{
    letter-spacing: 0.8px;
    font-size: 18px;
   }
+
   .section-tow-content{
    letter-spacing: 0.7px;
    font-size: 14px;
@@ -387,13 +368,14 @@ navx ul{
 }
 /*================================== Section 3============================================================*/
 .section-three{
-  height: 99vh;
+  height: auto;
   background: #F1F7F5;
   border-bottom-right-radius: 65% 15%;
   border-bottom-left-radius: 65% 15%;
   margin-bottom: -5.8%;
   text-align: center;
-  padding-top: 7.7%;
+  padding-top: 16vh;
+  padding-bottom: 24vh;
   color: #424242;
   align-content: center;
 }
@@ -414,6 +396,7 @@ navx ul{
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
   transition: transform .2s
 }
+
 .card-service:hover{
   transform: scale(1.04);
   transition: transform .2s;
@@ -424,7 +407,7 @@ navx ul{
   border-top-right-radius: 9px;
   border-top-left-radius: 9px;
   width: 100%;
-  height: 23vh;
+  max-height: 23vh;
 }
 .section-three h6{
   margin: 35px 0px 12px 0px;
@@ -492,31 +475,35 @@ navx ul{
   cursor: pointer;
 }
 
-@media screen and (max-width: 414px){
+@media screen and (max-width: 500px){
   .section-three{
     height: auto;
     border-bottom-right-radius: 90% 7%;
     border-bottom-left-radius: 90% 7%;
-    padding-bottom: 50px;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
     margin-bottom: -9.5%;
   }
-  .section-three h3{
-    margin-top: 13vh;
-  }
+
   .bar{
     margin-bottom: 4vh;
   }
+
   .col-two{
     margin-top: 20px;
   }
+
   .card-service{
-    height: 55vh;
+    height: 46vh;
+    padding-bottom: 20%;
   }
+
   .card-cost{
     width: 60%;
     padding: 10px 0 10px 0;
     font-size: 11px;
   }
+
   .btn-detail-soon, .btn-detail{
     width: 120px;
     padding: 10px 0px 10px 0px;
@@ -524,21 +511,30 @@ navx ul{
     margin-left: -60px;
     /* margin-top: 30px; */
   }
-}
-@media screen and (max-width: 375px){
-  .card-service{
-    height: 61.5vh;
+
+  .section-three img{
+    width: 100%;
+    max-height: 14vh;
   }
 }
+
+@media screen and (max-width: 374px){
+  .card-service{
+    height: 64vh;
+  }
+
+}
+
 /*================================== SECTION 4 ===========================================================*/
 .section-four{
-  height: 100vh;
-  padding-top: 8.5%;
+  height: auto;
+  padding-top: 20vh;
   background-image: url("../img/section4.png");
   background-repeat: no-repeat;
+  background-size: cover;
   align-content: center;
   text-align: center;
-  margin-bottom: 20px;
+  padding-bottom: 10%;
   color: #ffffff;
   z-index: -100!important;
   position: relative;
@@ -546,6 +542,7 @@ navx ul{
 }
 .section-four h3{
   margin-bottom: 6%;
+  padding: 0 5%;
   font-family: 'Poppins', sans-serif;
 }
 .card-believe{
@@ -578,33 +575,45 @@ navx ul{
   text-indent: 30px;
   padding: 0px 5px 0px 5px;
 }
-@media screen and (max-width: 414px){
-.section-four{
-  margin-top: -50px !important;
-  height: 131vh;
-  background-image: url("../img/bg4.png");
+@media screen and (max-width: 500px){
+  .section-four{
+    margin-top: -30% !important;
+    height: auto;
+    padding-bottom: 50%;
+    background-image: url("../img/bg4.png");
+    background-size: cover;
+  }
+  .section-four h3{
+    margin-top: 8vh;
+    margin-bottom: 3vh;
+    font-size: 25px;
+  }
+  .card-believe img{
+    width: 33% !important;
+    margin-bottom: 25px;
+    margin-top: 15px;
+  }
+  .card-believe-content{
+    text-align: center;
+    font-size: 11px;
+    text-indent: 0px;
+  }
 }
-.section-four h3{
-  margin-top: 15vh;
-  margin-bottom: 3vh;
-  font-size: 25px;
-}
-.card-believe img{
-  width: 33% !important;
-  margin-bottom: 25px;
-  margin-top: 15px;
-}
-.card-believe-content{
+
+/* underMaintenance =============================================================== */
+
+.underMaintenance {
+  height: auto;
+  padding-top: 40vh;
+  padding-bottom: 40vh;
+  align-content: center;
   text-align: center;
-  font-size: 11px;
-  text-indent: 0px;
+  color: #000000;
+  position: relative;
+  text-align: center;
 }
-}
-@media screen and (max-width: 375px){
-.section-four{
-  height: 145vh;
-}
-}
+
+
 
 /*footer==================================================================================================*/
 footer{
